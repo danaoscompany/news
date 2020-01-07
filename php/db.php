@@ -1,3 +1,3 @@
 <?php
-$c = new mysqli("localhost", "id11441156_news", "HelloWorld@123");
-$c->select_db("id11441156_news");
+$c = new mysqli("localhost", "osgk3177_news", "HelloWorld@123");
+$c->select_db("osgk3177_news");
