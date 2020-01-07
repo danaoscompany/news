@@ -1,0 +1,376 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Portal Berita Daerah</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:400,600,700" rel="stylesheet">
+
+    <!-- Stylesheets -->
+
+    <link href="../plugin-frameworks/bootstrap.css" rel="stylesheet">
+
+    <link href="../fonts/ionicons.css" rel="stylesheet">
+
+    <link href="../common/styles.css" rel="stylesheet">
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="../js/moment.js"></script>
+    <script src="../js/news.js"></script>
+
+</head>
+<body>
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '448181459210100',
+            autoLogAppEvents: true,
+            xfbml: true,
+            version: 'v5.0'
+        });
+    };
+</script>
+<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+<header>
+    <div class="bg-191">
+        <div class="container">
+            <div class="oflow-hidden color-ash font-9 text-sm-center ptb-sm-5">
+
+                <ul class="float-left float-sm-none list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-10">
+						<li><a class="pl-0 pl-sm-10" href="about.html">Tentang</a></li>
+						<li><a href="submit-news.html">Muat Berita</a></li>
+						<li><a onclick="goToSubscribeForm()" href="#">Berlangganan</a></li>
+						<li><a href="contact.html">Hubungi</a></li>
+					</ul>
+                <ul class="float-right float-sm-none list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-5">
+                    <li><a id="facebook" class="pl-0 pl-sm-10" href="#"><i class="ion-social-facebook"></i></a>
+                    </li>
+                    <li><a id="twitter" href="#"><i class="ion-social-twitter"></i></a></li>
+                    <li><a id="google" href="#"><i class="ion-social-google"></i></a></li>
+                    <li><a id="instagram" href="#"><i class="ion-social-instagram"></i></a></li>
+                    <li><a id="youtube" href="#"><i class="ion-social-youtube"></i></a></li>
+                </ul>
+
+            </div><!-- top-menu -->
+        </div><!-- container -->
+    </div><!-- bg-191 -->
+
+    <div class="container">
+        <a class="logo" href="../index.html?scope=none&land_id=2"><img src="../images/logo-black.png" alt="Logo"></a>
+
+        <a class="right-area src-btn" href="#">
+            <i class="active src-icn ion-search"></i>
+            <i class="close-icn ion-close"></i>
+        </a>
+        <div class="src-form">
+            <form>
+                <input type="text" placeholder="Search here">
+                <button type="submit"><i class="ion-search"></i></a></button>
+            </form>
+        </div><!-- src-form -->
+
+
+        <a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
+
+        <ul class="main-menu" id="main-menu">
+            <li><a href="news.html?scope=none">SEMUA BERITA</a></li>
+            <li><a href="news.html?scope=area">BERITA DAERAH</a></li>
+            <li><a href="news.html?scope=national">BERITA NASIONAL</a></li>
+            <li class="drop-down"><a href="news.html?scope=national">PROVINSI<i class="ion-arrow-down-b"></i></a>
+                <ul id="provinces" class="drop-down-menu drop-down-inner">
+                    <!--<li><a href="#">PAGE 1</a></li>-->
+                </ul>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div><!-- container -->
+</header>
+
+
+<section class="ptb-0">
+    <div class="mb-30 brdr-ash-1 opacty-5"></div>
+    <div class="container">
+        <a class="mt-10" href="../index.html?scope=none&land_id=2"><i class="mr-5 ion-ios-home"></i>Home<i
+                class="mlr-10 ion-chevron-right"></i></a>
+        <a class="mt-10" href="archive-page.html">Blog Archive<i class="mlr-10 ion-chevron-right"></i></a>
+        <a class="mt-10 color-ash" href="single-page.html">Single Blog</a>
+    </div><!-- container -->
+</section>
+
+
+<section>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12 col-lg-8">
+                <img id="image" src="" alt="">
+                <h3 id="title" class="mt-30"></h3>
+                <ul class="list-li-mr-20 mtb-15">
+                    <li>by <a id="writer" href="#"></a> <span id="date"></span></li>
+                    <li><i class="color-primary mr-5 font-12 ion-ios-bolt"></i><span id="viewers"></span></li>
+                    <li><i class="color-primary mr-5 font-12 ion-chatbubbles"></i><span id="comments"></span></li>
+                </ul>
+                <div id="content">
+                    <!--<p class="mtb-15">(Beritadaerah – Wisata Nusantara) Nusa Tenggara Timur (NTT) memiliki beraram daya tarik wisata, seperti di Alor misalnya. Di Alor, tidak semata memanjakan turis dengan wisata bahari saja, tapi di Kabupaten yang terkenal dengan mamalia dugong bernama ‘Mawar’ ini juga memiliki keunikan sejarah dan budaya.</p>
+                    <p class="mtb-15">Desa wisata yang makin dikenal oleh para wisatawan saat ini untk kota Alor adalah Desa Takpala. Desa ini merupakan sebuah kampung tradisional yang berada di Desa Lembur Barat, Kecamatan Alor Tengah Utara, Kabupaten Alor, Nusa Tenggara Timur. Lokasi kampung Takpala ini berada di atas bukit dan dihuni oleh kurang lebih 13 kepala keluarga Suku Abui.</p>-->
+                </div>
+                <div class="float-left-right text-center mt-40 mt-sm-20">
+                    <ul id="tags"
+                        class="mb-30 list-li-mt-10 list-li-mr-5 list-a-plr-15 list-a-ptb-7 list-a-bg-grey list-a-br-2 list-a-hvr-primary ">
+                        <!--<li><a href="#">MULTIPURPOSE</a></li>-->
+                    </ul>
+                    <ul class="mb-30 list-a-bg-grey list-a-hw-radial-35 list-a-hvr-primary list-li-ml-5">
+                        <li class="mr-10 ml-0">Share</li>
+                        <li><a onclick="shareFacebook(); return false;" href="#"><i class="ion-social-facebook"></i></a>
+                        </li>
+                        <li><a onclick="shareTwitter(); return false;" href="#"><i class="ion-social-twitter"></i></a>
+                        </li>
+                        <li><a onclick="shareGoogle(); return false;" href="#"><i class="ion-social-google"></i></a>
+                        </li>
+                        <li><a onclick="shareInstagram(); return false;" href="#"><i
+                                class="ion-social-instagram"></i></a></li>
+                    </ul>
+
+                </div><!-- float-left-right -->
+
+                <div class="brdr-ash-1 opacty-5"></div>
+
+                <h4 class="p-title mt-50"><b>ANDA JUGA MENYUKAI</b></h4>
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <img src="../images/3.jpg" alt="">
+                        <h4 class="pt-20"><a id="random-news-1" href="#"></a></h4>
+                        <ul class="list-li-mr-20 pt-10 mb-30">
+                            <li class="color-lite-black">by <a href="#" class="color-black"><span
+                                    id="random-news-1-writer"></span></a>
+                                <span id="random-news-1-date"></span>
+                            </li>
+                            <li><i class="color-primary mr-5 font-12 ion-ios-bolt"></i><span
+                                    id="random-news-1-viewers"></span></li>
+                            <li><i class="color-primary mr-5 font-12 ion-chatbubbles"></i><span
+                                    id="random-news-1-comments"></span></li>
+                        </ul>
+                    </div><!-- col-sm-6 -->
+
+                    <div class="col-sm-6">
+                        <img src="../images/2.jpg" alt="">
+                        <h4 class="pt-20"><a id="random-news-2" href="#"></a></h4>
+                        <ul class="list-li-mr-20 pt-10 mb-30">
+                            <li class="color-lite-black">by <a href="#" class="color-black"><span
+                                    id="random-news-2-writer"></span></a>
+                                <span id="random-news-2-date"></span>
+                            </li>
+                            <li><i class="color-primary mr-5 font-12 ion-ios-bolt"></i><span
+                                    id="random-news-2-viewers"></span></li>
+                            <li><i class="color-primary mr-5 font-12 ion-chatbubbles"></i><span
+                                    id="random-news-2-comments"></span></li>
+                        </ul>
+                    </div><!-- col-sm-6 -->
+
+                </div><!-- row -->
+
+                <h4 id="comments-count" class="p-title mt-20"></h4>
+
+                <div id="user-comments">
+                    <!--<div class="sided-70 mb-40">
+                        <div class="s-left rounded">
+                            <img src="../images/user.png" alt="">
+                        </div>
+                        <div class="s-right ml-100 ml-xs-85">
+                            <h5><b>Shuhein Chui, </b> <span class="font-8 color-ash">Nov 21, 2017</span></h5>
+                            <p class="mtb-15">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                doloremque laudantium, totam rem aperiam.</p>
+                        </div>
+                    </div>-->
+                </div>
+
+                <h4 class="p-title mt-20"><b>BERIKAN KOMENTAR</b></h4>
+
+                <form id="comment-form"
+                      class="form-block form-plr-15 form-h-45 form-mb-20 form-brdr-lite-white mb-md-50" action="#"
+                      method="post">
+                    <input type="text" placeholder="Your Name*:" name="name">
+                    <input type="text" placeholder="Your Email*:" name="email">
+                    <input type="text" placeholder="Your Phone*:" name="phone">
+                    <textarea class="ptb-10" placeholder="Your Comment" name="comment"></textarea>
+                    <button onclick="comment()" class="btn-fill-primary plr-30" rows="4" cols="50" type="submit"><b>BERIKAN
+                        KOMENTAR</b>
+                    </button>
+                </form>
+            </div><!-- col-md-9 -->
+
+            <div class="d-none d-md-block d-lg-none col-md-3"></div>
+            <div class="col-md-6 col-lg-4">
+                <div class="pl-20 pl-md-0">
+                    <div class="mtb-50">
+                        <h4 class="p-title"><b>BERITA POPULER</b></h4>
+                        <a id="popular-news-1-link" class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
+                            <div class="wh-100x abs-tlr"><img src="../images/8.jpg" alt=""></div>
+                            <div class="ml-120 min-h-100x">
+                                <h5 id="popular-news-1"></h5>
+                                <h6 class="color-lite-black pt-10">by <span class="color-black"><span
+                                        id="popular-news-1-name"></span></span> <span id="popular-news-1-date"></span>
+                                </h6>
+                            </div>
+                        </a><!-- oflow-hidden -->
+
+                        <a id="popular-news-2-link" class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
+                            <div class="wh-100x abs-tlr"><img src="../images/9.jpg" alt=""></div>
+                            <div class="ml-120 min-h-100x">
+                                <h5 id="popular-news-2"></h5>
+                                <h6 class="color-lite-black pt-10">by <span class="color-black"><span
+                                        id="popular-news-2-name"></span></span> <span id="popular-news-2-date"></span>
+                                </h6>
+                            </div>
+                        </a><!-- oflow-hidden -->
+
+                        <a id="popular-news-3-link" class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
+                            <div class="wh-100x abs-tlr"><img src="../images/10.jpg" alt=""></div>
+                            <div class="ml-120 min-h-100x">
+                                <h5 id="popular-news-3"></h5>
+                                <h6 class="color-lite-black pt-10">by <span class="color-black"><span
+                                        id="popular-news-3-name"></span></span> <span id="popular-news-3-date"></span>
+                                </h6>
+                            </div>
+                        </a><!-- oflow-hidden -->
+
+                        <a id="popular-news-4-link" class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
+                            <div class="wh-100x abs-tlr"><img src="../images/11.jpg" alt=""></div>
+                            <div class="ml-120 min-h-100x">
+                                <h5 id="popular-news-4"></h5>
+                                <h6 class="color-lite-black pt-10">by <span class="color-black"><span
+                                        id="popular-news-4-name"></span></span> <span id="popular-news-4-date"></span>
+                                </h6>
+                            </div>
+                        </a><!-- oflow-hidden -->
+
+                    </div><!-- mtb-50 -->
+
+                    <div class="mtb-50 pos-relative">
+                        <img src="../images/abc.jpg" alt="">
+                        <div class="abs-tblr bg-layer-7 text-center color-white">
+                            <div class="dplay-tbl">
+                                <div class="dplay-tbl-cell">
+                                    <h4><b>Tersedia di Google Play</b></h4>
+                                    <a class="mt-15 color-primary link-brdr-btm-primary" href="#"><b>Unduh
+                                        Gratis</b></a>
+                                </div><!-- dplay-tbl-cell -->
+                            </div><!-- dplay-tbl -->
+                        </div><!-- abs-tblr -->
+                    </div><!-- mtb-50 -->
+
+                    <div class="mtb-50 mb-md-0">
+                        <h4 id="subscribe-title" class="p-title"><b>BERLANGGANAN</b></h4>
+                        <p class="mb-20">Berlangganan ke umpan kami untuk mendapatkan notifikasi tentang update terbaru,
+                            informasi, artikel, dll..</p>
+                        <form class="nwsltr-primary-1" action="../php/subscribe.php" method="post">
+                            <input type="text" placeholder="Email Anda"/>
+                            <button type="submit"><i class="ion-ios-paperplane"></i></button>
+                        </form>
+                    </div><!-- mtb-50 -->
+
+                </div><!--  pl-20 -->
+            </div><!-- col-md-3 -->
+
+        </div><!-- row -->
+
+    </div><!-- container -->
+</section>
+
+
+<footer class="bg-191 color-ccc">
+
+    <div class="container">
+        <div class="pt-50 pb-20 pos-relative">
+            <div class="abs-tblr pt-50 z--1 text-center">
+                <div class="h-80 pos-relative"><img class="opacty-1 h-100 w-auto" src="../images/map.png" alt=""></div>
+            </div>
+            <div class="row">
+
+                <div class="col-sm-4">
+                    <div class="mb-30">
+                        <a href="#"><img src="../images/logo-white.png"></a>
+                        <p class="mtb-20 color-ccc">PortalBerita adalah media berita terkini dan terupdate mengenai segala peristiwa yang terjadi di daerah.</p>
+                        <p class="color-ash">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                            All rights reserved | This template is made with <i class="ion-heart"
+                                                                                aria-hidden="true"></i> by <a
+                                href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div><!-- mb-30 -->
+                </div><!-- col-md-4 -->
+
+                <div class="col-sm-4">
+                    <div class="mb-30">
+                        <h5 class="color-primary mb-20"><b>PALING POPULER</b></h5>
+                        <div class="mb-20">
+                            <a id="foot-news-1-link" class="color-white" href="#"><span id="foot-news-1"></span></a>
+                            <h6 id="foot-news-1-date" class="mt-10"></h6>
+                        </div>
+                        <div class="brdr-ash-1 opacty-2 mr-30"></div>
+                        <div class="mt-20">
+                            <a id="foot-news-2-link" class="color-white" href="#"><span id="foot-news-2"></span></a>
+                            <h6 id="foot-news-2-date" class="mt-10"></h6>
+                        </div>
+                    </div><!-- mb-30 -->
+                </div><!-- col-md-4 -->
+
+                <div class="col-sm-4">
+                    <div class="mb-30">
+                        <h5 class="color-primary mb-20"><b>PALING POPULER</b></h5>
+                        <div class="mb-20">
+                            <a id="foot-news-3-link" class="color-white" href="#"><span id="foot-news-3"></span></a>
+                            <h6 id="foot-news-3-date" class="mt-10"></h6>
+                        </div>
+                        <div class="brdr-ash-1 opacty-2 mr-30"></div>
+                        <div class="mt-20">
+                            <a id="foot-news-4-link" class="color-white" href="#"><span id="foot-news-4"></span></a>
+                            <h6 id="foot-news-4-date" class="mt-10"></h6>
+                        </div>
+                    </div><!-- mb-30 -->
+                </div><!-- col-md-4 -->
+
+            </div><!-- row -->
+        </div><!-- ptb-50 -->
+
+        <div class="brdr-ash-1 opacty-2"></div>
+
+        <div class="oflow-hidden color-ash font-9 text-sm-center ptb-sm-5">
+
+            <ul class="float-left float-sm-none list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-10">
+                <li><a class="pl-0 pl-sm-10" href="../tos.html">Kebijakan Penggunaan</a></li>
+                <li><a href="../privacy-policy.html">Kebijakan Privasi</a></li>
+                <li><a href="../about.html">Tentang Kami</a></li>
+                <li><a href="../contact.html">Hubungi Kami</a></li>
+            </ul>
+            <ul class="float-right float-sm-none list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-5">
+                <li><a id="facebook-2" class="pl-0 pl-sm-10" href="#"><i class="ion-social-facebook"></i></a></li>
+                <li><a id="twitter-2" href="#"><i class="ion-social-twitter"></i></a></li>
+                <li><a id="google-2" href="#"><i class="ion-social-google"></i></a></li>
+                <li><a id="instagram-2" href="#"><i class="ion-social-instagram"></i></a></li>
+                <li><a id="youtube-2" href="#"><i class="ion-social-youtube"></i></a></li>
+            </ul>
+
+        </div><!-- oflow-hidden -->
+    </div><!-- container -->
+</footer>
+
+<!-- SCIPTS -->
+
+<script src="../plugin-frameworks/jquery-3.2.1.min.js"></script>
+
+<script src="../plugin-frameworks/tether.min.js"></script>
+
+<script src="../plugin-frameworks/bootstrap.js"></script>
+
+<script src="../common/scripts.js"></script>
+
+</body>
+</html>

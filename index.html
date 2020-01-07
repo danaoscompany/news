@@ -1,0 +1,497 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Portal Berita Daerah</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:400,600,700" rel="stylesheet">
+	<link href="plugin-frameworks/bootstrap.css" rel="stylesheet">
+	<link href="fonts/ionicons.css" rel="stylesheet">
+	<link href="common/styles.css" rel="stylesheet">
+	<script src="js/jquery.js"></script>
+	<script src="js/global.js"></script>
+	<script src="js/moment.js"></script>
+	<script src="js/index.js"></script>
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+</head>
+<body>
+	
+	<header>
+		<div class="bg-191">
+			<div class="container">	
+				<div class="oflow-hidden color-ash font-9 text-sm-center ptb-sm-5">
+				
+					<ul class="float-left float-sm-none list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-10">
+						<li><a class="pl-0 pl-sm-10" href="about.html">Tentang</a></li>
+						<li><a href="submit-news.html">Muat Berita</a></li>
+						<li><a onclick="goToSubscribeForm()" href="#">Berlangganan</a></li>
+						<li><a href="contact.html">Hubungi</a></li>
+					</ul>
+					<ul class="float-right float-sm-none list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-5">
+						<li><a id="facebook-2" class="pl-0 pl-sm-10" href="#" target="_blank"><i class="ion-social-facebook"></i></a></li>
+						<li><a id="twitter-2" href="#" target="_blank"><i class="ion-social-twitter"></i></a></li>
+						<li><a id="google-2" href="#" target="_blank"><i class="ion-social-google"></i></a></li>
+						<li><a id="instagram-2" href="#" target="_blank"><i class="ion-social-instagram"></i></a></li>
+						<li><a id="youtube-2" href="#" target="_blank"><i class="ion-social-youtube"></i></a></li>
+					</ul>
+					
+				</div><!-- top-menu -->
+			</div><!-- container -->
+		</div><!-- bg-191 -->
+		
+		<div class="container">
+			<a class="logo" href="index.html?scope=none&land_id=2"><img src="images/logo-black.png" alt="Logo"></a>
+			
+			<a class="right-area src-btn" href="#" >
+				<i class="active src-icn ion-search"></i>
+				<i class="close-icn ion-close"></i>
+			</a>
+			<div class="src-form">
+				<form>
+					<input type="text" placeholder="Search here">
+					<button type="submit"><i class="ion-search"></i></a></button>
+				</form>
+			</div><!-- src-form -->
+			
+			<a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
+			
+			<ul class="main-menu" id="main-menu">
+				<li><a href="index.html?scope=none&land_id=2">SEMUA BERITA</a></li>
+				<li><a href="index.html?scope=area">BERITA DAERAH</a></li>
+				<li><a href="index.html?scope=national">BERITA NASIONAL</a></li>
+				<li class="drop-down"><a href="news/news.html">PROVINSI<i class="ion-arrow-down-b"></i></a>
+					<ul id="provinces" class="drop-down-menu drop-down-inner">
+						<!--<li><a href="#">PAGE 1</a></li>-->
+					</ul>
+				</li>
+			</ul>
+			<div class="clearfix"></div>
+		</div><!-- container -->
+	</header>
+	
+	
+	<div class="container">
+		<div class="h-600x h-sm-auto">
+			<div class="h-2-3 h-sm-auto oflow-hidden">
+
+				<div class="pb-5 pr-5 pr-sm-0 float-left float-sm-none w-2-3 w-sm-100 h-100 h-sm-300x">
+					<a id="random-news-1-link" class="pos-relative h-100 dplay-block" href="news/news.html">
+
+						<div class="img-bg bg-grad-layer-6">
+							<img id="bg-1" width="734px" height="394px"/>
+						</div>
+
+						<div class="abs-blr color-white p-20 bg-sm-color-7">
+							<h3 id="random-news-1" class="mb-15 mb-sm-5 font-sm-13"></h3>
+							<ul class="list-li-mr-20">
+								<li>by <span id="random-news-1-writer" class="color-primary"></span> <span id="random-news-1-date"></span></li>
+								<li><i class="color-primary mr-5 font-12 ion-ios-bolt"></i><span id="random-news-1-viewers"></span></li>
+								<li><i class="color-primary mr-5 font-12 ion-chatbubbles"></i><span id="random-news-1-comments">30</span></li>
+							</ul>
+						</div><!--abs-blr -->
+					</a><!-- pos-relative -->
+				</div><!-- w-1-3 -->
+
+				<div class="float-left float-sm-none w-1-3 w-sm-100 h-100 h-sm-600x">
+
+					<div class="pl-5 pb-5 pl-sm-0 ptb-sm-5 pos-relative h-50">
+						<a id="random-news-2-link" class="pos-relative h-100 dplay-block" href="#">
+
+							<div class="img-bg bg-grad-layer-6">
+								<img id="bg-2" width="734px" height="394px"/>
+							</div>
+
+							<div class="abs-blr color-white p-20 bg-sm-color-7">
+								<h4 id="random-news-2" class="mb-10 mb-sm-5"><b>Russians Bisiops Condems Cryptocurrecy</b></h4>
+								<ul class="list-li-mr-20">
+									<li id="random-news-2-date">Jan 25, 2018</li>
+									<li><i class="color-primary mr-5 font-12 ion-ios-bolt"></i><span id="random-news-2-viewers">30,190</span></li>
+									<li><i class="color-primary mr-5 font-12 ion-chatbubbles"></i><span id="random-news-2-comments">30</span></li>
+								</ul>
+							</div><!--abs-blr -->
+						</a><!-- pos-relative -->
+					</div><!-- w-1-3 -->
+
+					<div class="pl-5 ptb-5 pl-sm-0 pos-relative h-50">
+						<a id="random-news-3-link" class="pos-relative h-100 dplay-block" href="#">
+
+							<div class="img-bg bg-grad-layer-6">
+								<img id="bg-3" width="734px" height="394px"/>
+							</div>
+
+							<div class="abs-blr color-white p-20 bg-sm-color-7">
+								<h4 class="mb-10 mb-sm-5"><b>Bitcoin Adoption by Business in 2017</b></h4>
+								<ul class="list-li-mr-20">
+									<li id="random-news-3-date">Jan 25, 2018</li>
+									<li><i class="color-primary mr-5 font-12 ion-ios-bolt"></i><span id="random-news-3-viewers">30,190</span></li>
+									<li><i class="color-primary mr-5 font-12 ion-chatbubbles"></i><span id="random-news-3-comments">30</span></li>
+								</ul>
+							</div><!--abs-blr -->
+						</a><!-- pos-relative -->
+					</div><!-- w-1-3 -->
+
+				</div><!-- float-left -->
+
+			</div><!-- h-2-3 -->
+
+			<div class="h-1-3 oflow-hidden">
+
+				<div class="pr-5 pr-sm-0 pt-5 float-left float-sm-none pos-relative w-1-3 w-sm-100 h-100 h-sm-300x">
+					<a id="random-news-4-link" class="pos-relative h-100 dplay-block" href="#">
+
+						<div class="img-bg bg-grad-layer-6">
+							<img id="bg-4" width="734px" height="394px"/>
+						</div>
+
+						<div class="abs-blr color-white p-20 bg-sm-color-7">
+							<h4 id="random-news-3" class="mb-10 mb-sm-5"><b>Menparekraf Meninjau Perkembangan Destinasi Super Prioritas Borobudur</b></h4>
+							<ul class="list-li-mr-20">
+								<li id="random-news-4-date">Jan 25, 2018</li>
+								<li><i class="color-primary mr-5 font-12 ion-ios-bolt"></i><span id="random-news-4-viewers">30,190</span></li>
+								<li><i class="color-primary mr-5 font-12 ion-chatbubbles"></i><span id="random-news-4-comments">30</span></li>
+							</ul>
+						</div><!--abs-blr -->
+					</a><!-- pos-relative -->
+				</div><!-- w-1-3 -->
+
+				<div class="plr-5 plr-sm-0 pt-5 pt-sm-10 float-left float-sm-none pos-relative w-1-3 w-sm-100 h-100 h-sm-300x">
+					<a id="random-news-5-link" class="pos-relative h-100 dplay-block" href="#">
+
+						<div class="img-bg bg-grad-layer-6">
+							<img id="bg-5" width="734px" height="394px"/>
+						</div>
+
+						<div class="abs-blr color-white p-20 bg-sm-color-7">
+							<h4 class="mb-10 mb-sm-5"><b>Culture Stock: Bitcoin a Part of all Walks of life in 2017</b></h4>
+							<ul class="list-li-mr-20">
+								<li id="random-news-5-date">Jan 25, 2018</li>
+								<li><i class="color-primary mr-5 font-12 ion-ios-bolt"></i><span id="random-news-5-viewers">190</span></li>
+								<li><i class="color-primary mr-5 font-12 ion-chatbubbles"></i><span id="random-news-5-comments">30</span></li>
+							</ul>
+						</div><!--abs-blr -->
+					</a><!-- pos-relative -->
+				</div><!-- w-1-3 -->
+
+				<div class="pl-5 pl-sm-0 pt-5 pt-sm-10 float-left float-sm-none pos-relative w-1-3 w-sm-100 h-100 h-sm-300x">
+					<a id="random-news-6-link" class="pos-relative h-100 dplay-block" href="#">
+
+						<div class="img-bg bg-6 bg-grad-layer-6"></div>
+
+						<div class="abs-blr color-white p-20 bg-sm-color-7">
+							<h4 id="random-news-4" class="mb-10 mb-sm-5"><b>Bitcoin Billionares Hidding in Plain Sight</b></h4>
+							<ul class="list-li-mr-20">
+								<li id="random-news-6-date">Jan 25, 2018</li>
+								<li><i class="color-primary mr-5 font-12 ion-ios-bolt"></i><span id="random-news-6-viewers">30,190</span></li>
+								<li><i class="color-primary mr-5 font-12 ion-chatbubbles"></i><span id="random-news-6-comments">30</span></li>
+							</ul>
+						</div><!--abs-blr -->
+					</a><!-- pos-relative -->
+				</div><!-- w-1-3 -->
+
+			</div><!-- h-2-3 -->
+		</div><!-- h-100vh -->
+	</div><!-- container -->
+	
+	
+	<section>
+		<div class="container">
+			<div class="row">
+			
+				<div class="col-md-12 col-lg-8">
+					<h4 class="p-title"><b>RECENT NEWS</b></h4>
+					<div class="row">
+					
+						<div class="col-sm-6">
+							<img id="recent-news-1-img" src="" alt="">
+							<h4 class="pt-20"><a id="recent-news-1" href="#"></a></h4>
+							<ul class="list-li-mr-20 pt-10 pb-20">
+								<li class="color-lite-black">by <a id="recent-news-1-name" href="#" class="color-black"></a>
+									<span id="recent-news-1-date"></span></li>
+								<li><i class="color-primary mr-5 font-12 ion-ios-bolt"></i><span id="recent-news-1-viewers"></span></li>
+								<li><i class="color-primary mr-5 font-12 ion-chatbubbles"></i><b>47</b></li>
+							</ul>
+							<p id="recent-news-1-short"></p>
+						</div><!-- col-sm-6 -->
+						
+						<div class="col-sm-6">
+							<a class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
+								<div class="wh-100x abs-tlr"><img id="recent-news-2-img" src="" alt=""></div>
+								<div class="ml-120 min-h-100x">
+									<h5 id="recent-news-2"></h5>
+									<h6 class="color-lite-black pt-10">by <span class="color-black"><span id="recent-news-2-name"></span></span> <span id="recent-news-2-date"></span></h6>
+								</div>
+							</a><!-- oflow-hidden -->
+							
+							<a class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
+								<div class="wh-100x abs-tlr"><img src="images/9.jpg" alt=""></div>
+								<div class="ml-120 min-h-100x">
+									<h5 id="recent-news-3"></h5>
+									<h6 class="color-lite-black pt-10">by <span class="color-black"><span id="recent-news-3-name"></span></span> <span id="recent-news-3-date"></span></h6>
+								</div>
+							</a><!-- oflow-hidden -->
+							
+							<a class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
+								<div class="wh-100x abs-tlr"><img src="images/10.jpg" alt=""></div>
+								<div class="ml-120 min-h-100x">
+									<h5 id="recent-news-4"></h5>
+									<h6 class="color-lite-black pt-10">by <span class="color-black"><span id="recent-news-4-name"></span></span> <span id="recent-news-4-date"></span></h6>
+								</div>
+							</a><!-- oflow-hidden -->
+							
+							<a class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
+								<div class="wh-100x abs-tlr"><img src="images/11.jpg" alt=""></div>
+								<div class="ml-120 min-h-100x">
+									<h5 id="recent-news-5"></h5>
+									<h6 class="color-lite-black pt-10">by <span class="color-black"><span id="recent-news-5-name"></span></span> <span id="recent-news-5-date"></span></h6>
+								</div>
+							</a><!-- oflow-hidden -->
+						</div><!-- col-sm-6 -->
+						
+					</div><!-- row -->
+					
+					<h4 class="p-title mt-30"><b>ARTIKEL TERBARU</b></h4>
+					<div id="articles" class="row">
+
+						<div class="col-sm-6">
+							<img id="recent-article-1-img" src="images/abc.jpg" alt="">
+							<h4 class="pt-20"><a id="recent-article-1" href="#"></a></h4>
+							<ul class="list-li-mr-20 pt-10 mb-30">
+								<li class="color-lite-black">by <a id="recent-article-1-name" href="#" class="color-black"></a>
+								<span id="recent-article-1-date"></span></li>
+								<li><i class="color-primary mr-5 font-12 ion-ios-bolt"></i><span id="recent-article-1-viewers"></span></li>
+								<li><i class="color-primary mr-5 font-12 ion-chatbubbles"></i><span id="recent-article-1-comments"></span></li>
+							</ul>
+						</div><!-- col-sm-6 -->
+						
+						<div class="col-sm-6">
+							<img id="recent-article-2-img" src="images/abc.jpg" alt="">
+							<h4 class="pt-20"><a id="recent-article-2" href="#"></a></h4>
+							<ul class="list-li-mr-20 pt-10 mb-30">
+								<li class="color-lite-black">by <a id="recent-article-2-name" href="#" class="color-black"></a>
+									<span id="recent-article-2-date"></span></li>
+								<li><i class="color-primary mr-5 font-12 ion-ios-bolt"></i><span id="recent-article-2-viewers"></span></li>
+								<li><i class="color-primary mr-5 font-12 ion-chatbubbles"></i><span id="recent-article-2-comments"></span></li>
+							</ul>
+						</div><!-- col-sm-6 -->
+					
+						<div class="col-sm-6">
+							<img id="recent-article-3-img"  src="" alt="">
+							<h4 class="pt-20"><a id="recent-article-3" href="#"></a></h4>
+							<ul class="list-li-mr-20 pt-10 mb-30">
+								<li class="color-lite-black">by <a id="recent-article-3-name" href="#" class="color-black"></a>
+									<span id="recent-article-3-date"></span></li>
+								<li><i class="color-primary mr-5 font-12 ion-ios-bolt"></i><span id="recent-article-3-viewers"></span></li>
+								<li><i class="color-primary mr-5 font-12 ion-chatbubbles"></i><span id="recent-article-3-comments"></span></li>
+							</ul>
+						</div><!-- col-sm-6 -->
+						
+						<div class="col-sm-6">
+							<img id="recent-article-4-img"  src="" alt="">
+							<h4 class="pt-20"><a id="recent-article-4" href="#"></a></h4>
+							<ul class="list-li-mr-20 pt-10 mb-30">
+								<li class="color-lite-black">by <a id="recent-article-4-name" href="#" class="color-black"></a>
+									<span id="recent-article-4-date"></span></li>
+								<li><i class="color-primary mr-5 font-12 ion-ios-bolt"></i><span id="recent-article-4-viewers"></span></li>
+								<li><i class="color-primary mr-5 font-12 ion-chatbubbles"></i><span id="recent-article-4-comments"></span></li>
+							</ul>
+						</div><!-- col-sm-6 -->
+						
+						<div class="col-sm-6">
+							<img id="recent-article-5-img"  src="" alt="">
+							<h4 class="pt-20"><a id="recent-article-5" href="#"></a></h4>
+							<ul class="list-li-mr-20 pt-10 mb-30">
+								<li class="color-lite-black">by <a id="recent-article-5-name" href="#" class="color-black"></a>
+									<span id="recent-article-5-date"></span></li>
+								<li><i class="color-primary mr-5 font-12 ion-ios-bolt"></i><span id="recent-article-5-viewers"></span></li>
+								<li><i class="color-primary mr-5 font-12 ion-chatbubbles"></i><span id="recent-article-5-comments"></span></li>
+							</ul>
+						</div><!-- col-sm-6 -->
+						
+						<div class="col-sm-6">
+							<img id="recent-article-6-img"  src="" alt="">
+							<h4 class="pt-20"><a id="recent-article-6" href="#"></a></h4>
+							<ul class="list-li-mr-20 pt-10 mb-30">
+								<li class="color-lite-black">by <a id="recent-article-6-name" href="#" class="color-black"></a>
+									<span id="recent-article-6-date"></span></li>
+								<li><i class="color-primary mr-5 font-12 ion-ios-bolt"></i><span id="recent-article-6-viewers"></span></li>
+								<li><i class="color-primary mr-5 font-12 ion-chatbubbles"></i><span id="recent-article-6-comments"></span></li>
+							</ul>
+						</div><!-- col-sm-6 -->
+						
+					</div><!-- row -->
+					
+					<a onclick="viewMoreArticle(); return false;" class="dplay-block btn-brdr-primary mt-20 mb-md-50" href="#"><b>LIHAT LEBIH BANYAK ARTIKEL</b></a>
+				</div><!-- col-md-9 -->
+				
+				<div class="d-none d-md-block d-lg-none col-md-3"></div>
+				<div class="col-md-6 col-lg-4">
+					<div class="pl-20 pl-md-0">
+						<div class="mtb-50">
+							<h4 class="p-title"><b>BERITA POPULER</b></h4>
+							<a id="popular-news-1-link" class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
+								<div class="wh-100x abs-tlr"><img src="images/8.jpg" alt=""></div>
+								<div class="ml-120 min-h-100x">
+									<h5 id="popular-news-1"></h5>
+									<h6 class="color-lite-black pt-10">by <span class="color-black"><span id="popular-news-1-name"></span></span> <span id="popular-news-1-date"></span></h6>
+								</div>
+							</a><!-- oflow-hidden -->
+							
+							<a id="popular-news-2-link" class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
+								<div class="wh-100x abs-tlr"><img src="images/9.jpg" alt=""></div>
+								<div class="ml-120 min-h-100x">
+									<h5 id="popular-news-2"></h5>
+									<h6 class="color-lite-black pt-10">by <span class="color-black"><span id="popular-news-2-name"></span> <span id="popular-news-2-date"></span></h6>
+								</div>
+							</a><!-- oflow-hidden -->
+							
+							<a id="popular-news-3-link" class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
+								<div class="wh-100x abs-tlr"><img src="images/10.jpg" alt=""></div>
+								<div class="ml-120 min-h-100x">
+									<h5 id="popular-news-3"></h5>
+									<h6 class="color-lite-black pt-10">by <span class="color-black"><span id="popular-news-3-name"></span> <span id="popular-news-3-date"></span></h6>
+								</div>
+							</a><!-- oflow-hidden -->
+							
+							<a id="popular-news-4-link" class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
+								<div class="wh-100x abs-tlr"><img src="images/11.jpg" alt=""></div>
+								<div class="ml-120 min-h-100x">
+									<h5 id="popular-news-4"></h5>
+									<h6 class="color-lite-black pt-10">by <span class="color-black"><span id="popular-news-4-name"></span> <span id="popular-news-4-date"></span></h6>
+								</div>
+							</a><!-- oflow-hidden -->
+							
+						</div><!-- mtb-50 -->
+						
+						<div class="mtb-50 pos-relative">
+							<img id="random-news-1-img" src="images/abc.jpg" alt="" width="100px" height="100px">
+							<div class="abs-tblr bg-layer-7 text-center color-white">
+								<div class="dplay-tbl">
+									<div class="dplay-tbl-cell">
+										<h4><b>Tersedia di Google Play</b></h4>
+										<a class="mt-15 color-primary link-brdr-btm-primary" href="https://play.google.com/store/apps/details?id=com.prod.news" target="_blank"><b>Download for free</b></a>
+									</div><!-- dplay-tbl-cell -->
+								</div><!-- dplay-tbl -->
+							</div><!-- abs-tblr -->
+						</div><!-- mtb-50 -->
+						
+						<div class="mtb-50 mb-md-0">
+							<h4 id="subscribe-title" class="p-title"><b>BERLANGGANAN</b></h4>
+							<p class="mb-20">Berlangganan ke umpan kami untuk mendapatkan notifikasi tentang update terbaru,
+								informasi, artikel, dll..</p>
+							<form class="nwsltr-primary-1" action="php/subscribe.php" method="post">
+								<input id="email" type="text" placeholder="Email Anda" name="email"/>
+								<button type="submit"><i class="ion-ios-paperplane"></i></button>
+							</form>
+						</div><!-- mtb-50 -->
+
+					</div><!--  pl-20 -->
+				</div><!-- col-md-3 -->
+				
+			</div><!-- row -->
+		</div><!-- container -->
+	</section>
+	
+	
+	<footer class="bg-191 color-ccc">
+		
+		<div class="container">
+			<div class="pt-50 pb-20 pos-relative">
+				<div class="abs-tblr pt-50 z--1 text-center">
+					<div class="h-80 pos-relative"><img class="opacty-1 h-100 w-auto" src="images/map.png" alt=""></div>
+				</div>
+				<div class="row">
+				
+					<div class="col-sm-4">
+						<div class="mb-30">
+							<a href="#"><img src="images/logo-white.png"></a>
+							<p class="mtb-20 color-ccc">PortalBerita adalah media berita terkini dan terupdate mengenai segala peristiwa yang terjadi di daerah.</p>
+							<p class="color-ash"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ion-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							</p>
+						</div><!-- mb-30 -->
+					</div><!-- col-md-4 -->
+					
+					<div class="col-sm-4">
+						<div class="mb-30">
+							<h5 class="color-primary mb-20"><b>PALING POPULER</b></h5>
+							<div class="mb-20">
+								<a id="most-popular-news-1" class="color-white" href="#"></a>
+								<h6 id="most-popular-news-1-date" class="mt-10"></h6>
+							</div>
+							<div class="brdr-ash-1 opacty-2 mr-30"></div>
+							<div class="mt-20">
+								<a id="most-popular-news-2" class="color-white" href="#"></a>
+								<h6 id="most-popular-news-2-date" class="mt-10"></h6>
+							</div>
+						</div><!-- mb-30 -->
+					</div><!-- col-md-4 -->
+					
+					<div class="col-sm-4">
+						<div class="mb-30">
+							<h5 class="color-primary mb-20"><b>PALING POPULER</b></h5>
+							<div class="mb-20">
+								<a id="most-popular-news-3" class="color-white" href="#"></a>
+								<h6 id="most-popular-news-3-date" class="mt-10"></h6>
+							</div>
+							<div class="brdr-ash-1 opacty-2 mr-30"></div>
+							<div class="mt-20">
+								<a id="most-popular-news-4" class="color-white" href="#"></a>
+								<h6 id="most-popular-news-4-date" class="mt-10"></h6>
+							</div>
+						</div><!-- mb-30 -->
+					</div><!-- col-md-4 -->
+					
+				</div><!-- row -->
+			</div><!-- ptb-50 -->
+			
+			<div class="brdr-ash-1 opacty-2"></div>
+			
+			<div class="oflow-hidden color-ash font-9 text-sm-center ptb-sm-5">
+			
+				<ul class="float-left float-sm-none list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-10">
+					<li><a class="pl-0 pl-sm-10" href="tos.html">Ketentuan Penggunaan</a></li>
+					<li><a href="privacy-policy.html">Kebijakan Privasi</a></li>
+					<li><a href="about.html">Tentang Kami</a></li>
+					<li><a href="contact.html">Hubungi Kami</a></li>
+				</ul>
+				<ul class="float-right float-sm-none list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-5">
+					<li><a id="facebook" class="pl-0 pl-sm-10" href="#" target="_blank"><i class="ion-social-facebook"></i></a></li>
+					<li><a id="twitter" href="#" target="_blank"><i class="ion-social-twitter"></i></a></li>
+					<li><a id="google" href="#" target="_blank"><i class="ion-social-google"></i></a></li>
+					<li><a id="instagram" href="#" target="_blank"><i class="ion-social-instagram"></i></a></li>
+					<li><a id="youtube" href="#" target="_blank"><i class="ion-social-youtube"></i></a></li>
+				</ul>
+				
+			</div><!-- oflow-hidden -->
+		</div><!-- container -->
+	</footer>
+	
+	<!-- SCIPTS -->
+	
+	<script src="plugin-frameworks/jquery-3.2.1.min.js"></script>
+	
+	<script src="plugin-frameworks/tether.min.js"></script>
+	
+	<script src="plugin-frameworks/bootstrap.js"></script>
+	
+	<script src="common/scripts.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-messaging.js"></script>
+	<script>
+		var firebaseConfig = {
+			apiKey: "AIzaSyBWCUSWCiLYBJDkU2HHnAfC_aTzQ9k3qcA",
+			authDomain: "portal-berita-daerah.firebaseapp.com",
+			databaseURL: "https://portal-berita-daerah.firebaseio.com",
+			projectId: "portal-berita-daerah",
+			storageBucket: "portal-berita-daerah.appspot.com",
+			messagingSenderId: "396710790862",
+			appId: "1:396710790862:web:65df0f435c62aeda1d329f"
+		};
+		firebase.initializeApp(firebaseConfig);
+	</script>
+</body>
+</html>

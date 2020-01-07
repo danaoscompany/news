@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Tentang Kami</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:400,600,700" rel="stylesheet">
+    <link href="plugin-frameworks/bootstrap.css" rel="stylesheet">
+    <link href="fonts/ionicons.css" rel="stylesheet">
+    <link href="common/styles.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/contact.js"></script>
+    <title>Contact V19</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+<header>
+    <div class="bg-191">
+        <div class="container">
+            <div class="oflow-hidden color-ash font-9 text-sm-center ptb-sm-5">
+
+                <ul class="float-left float-sm-none list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-10">
+						<li><a class="pl-0 pl-sm-10" href="about.html">Tentang</a></li>
+						<li><a href="submit-news.html">Muat Berita</a></li>
+						<li><a onclick="goToSubscribeForm()" href="#">Berlangganan</a></li>
+						<li><a href="contact.html">Hubungi</a></li>
+					</ul>
+                <ul class="float-right float-sm-none list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-5">
+                    <li><a class="pl-0 pl-sm-10" href="#"><i class="ion-social-facebook"></i></a></li>
+                    <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                    <li><a href="#"><i class="ion-social-google"></i></a></li>
+                    <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                    <li><a href="#"><i class="ion-social-bitcoin"></i></a></li>
+                </ul>
+
+            </div><!-- top-menu -->
+        </div><!-- container -->
+    </div><!-- bg-191 -->
+
+    <div class="container">
+        <a class="logo" href="index.html?scope=none&land_id=2"><img src="images/logo-black.png" alt="Logo"></a>
+
+        <a class="right-area src-btn" href="#">
+            <i class="active src-icn ion-search"></i>
+            <i class="close-icn ion-close"></i>
+        </a>
+        <div class="src-form">
+            <form>
+                <input type="text" placeholder="Search here">
+                <button type="submit"><i class="ion-search"></i></a></button>
+            </form>
+        </div><!-- src-form -->
+
+        <a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
+
+        <ul class="main-menu" id="main-menu">
+            <li><a href="news.html?scope=none">SEMUA BERITA</a></li>
+            <li><a href="news.html?scope=area">BERITA DAERAH</a></li>
+            <li><a href="news.html?scope=national">BERITA NASIONAL</a></li>
+            <li class="drop-down"><a href="news.html?scope=national">PROVINSI<i class="ion-arrow-down-b"></i></a>
+                <ul id="provinces" class="drop-down-menu drop-down-inner">
+                    <!--<li><a href="#">PAGE 1</a></li>-->
+                </ul>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div><!-- container -->
+</header>
+
+
+<div class="container">
+</div><!-- container -->
+
+
+<section>
+    <div class="container">
+        <div class="container-contact100">
+            <div class="wrap-contact100">
+                <form id="contact-form" class="contact100-form validate-form" action="php/send-question.php" method="post">
+				<span class="contact100-form-title">Hubungi Kami</span>
+                    <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                        <label class="label-input100" for="email">
+                            <img src="images/icons/symbol-01.png" alt="SYMBOL-MAIL">
+                        </label>
+                        <input id="email" class="input100" type="text" name="email" placeholder="Alamat Email Anda">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate = "Message is required">
+                        <textarea id="question" class="input100" name="message" placeholder="Apa Yang Bisa Kami Bantu?"></textarea>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="container-contact100-form-btn">
+                        <button class="contact100-form-btn">Kirim Pesan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+        <div id="dropDownSelect1"></div>
+
+        <!--===============================================================================================-->
+        <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="vendor/animsition/js/animsition.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="vendor/bootstrap/js/popper.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="vendor/select2/select2.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="vendor/daterangepicker/moment.min.js"></script>
+        <script src="vendor/daterangepicker/daterangepicker.js"></script>
+        <!--===============================================================================================-->
+        <script src="vendor/countdowntime/countdowntime.js"></script>
+        <!--===============================================================================================-->
+        <!--===============================================================================================-->
+        <script src="js/main.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-23581568-13');
+        </script>
+    </div><!-- container -->
+</section>
+
+
+<footer class="bg-191 color-ccc">
+
+    <div class="container">
+        <div class="pt-50 pb-20 pos-relative">
+            <div class="abs-tblr pt-50 z--1 text-center">
+                <div class="h-80 pos-relative"><img class="opacty-1 h-100 w-auto" src="images/map.png" alt=""></div>
+            </div>
+            <div class="row">
+
+                <div class="col-sm-4">
+                    <div class="mb-30">
+                        <a href="#"><img src="images/logo-white.png"></a>
+                        <p class="mtb-20 color-ccc">PortalBerita adalah media berita terkini dan terupdate mengenai
+                            segala peristiwa yang terjadi di daerah.</p>
+                        <p class="color-ash">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                            All rights reserved</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div><!-- mb-30 -->
+                </div><!-- col-md-4 -->
+
+                <div class="col-sm-4">
+                    <div class="mb-30">
+                        <h5 class="color-primary mb-20"><b>PALING POPULER</b></h5>
+                        <div class="mb-20">
+                            <a id="most-popular-news-1" class="color-white" href="#"></a>
+                            <h6 id="most-popular-news-1-date" class="mt-10"></h6>
+                        </div>
+                        <div class="brdr-ash-1 opacty-2 mr-30"></div>
+                        <div class="mt-20">
+                            <a id="most-popular-news-2" class="color-white" href="#"></a>
+                            <h6 id="most-popular-news-2-date" class="mt-10"></h6>
+                        </div>
+                    </div><!-- mb-30 -->
+                </div><!-- col-md-4 -->
+
+                <div class="col-sm-4">
+                    <div class="mb-30">
+                        <h5 class="color-primary mb-20"><b>PALING POPULER</b></h5>
+                        <div class="mb-20">
+                            <a id="most-popular-news-3" class="color-white" href="#"></a>
+                            <h6 id="most-popular-news-3-date" class="mt-10"></h6>
+                        </div>
+                        <div class="brdr-ash-1 opacty-2 mr-30"></div>
+                        <div class="mt-20">
+                            <a id="most-popular-news-4" class="color-white" href="#"></a>
+                            <h6 id="most-popular-news-4-date" class="mt-10"></h6>
+                        </div>
+                    </div><!-- mb-30 -->
+                </div><!-- col-md-4 -->
+
+            </div><!-- row -->
+        </div><!-- ptb-50 -->
+
+        <div class="brdr-ash-1 opacty-2"></div>
+
+        <div class="oflow-hidden color-ash font-9 text-sm-center ptb-sm-5">
+
+            <ul class="float-left float-sm-none list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-10">
+                <li><a class="pl-0 pl-sm-10" href="tos.html">Ketentuan Penggunaan</a></li>
+                <li><a href="privacy-policy.html">Kebijakan Privasi</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="contact.html">Hubungi Kami</a></li>
+            </ul>
+            <ul class="float-right float-sm-none list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-5">
+                <li><a id="facebook" class="pl-0 pl-sm-10" href="#" target="_blank"><i class="ion-social-facebook"></i></a>
+                </li>
+                <li><a id="twitter" href="#" target="_blank"><i class="ion-social-twitter"></i></a></li>
+                <li><a id="google" href="#" target="_blank"><i class="ion-social-google"></i></a></li>
+                <li><a id="instagram" href="#" target="_blank"><i class="ion-social-instagram"></i></a></li>
+                <li><a id="youtube" href="#" target="_blank"><i class="ion-social-youtube"></i></a></li>
+            </ul>
+
+        </div><!-- oflow-hidden -->
+    </div><!-- container -->
+</footer>
+
+<!-- SCIPTS -->
+
+<script src="plugin-frameworks/jquery-3.2.1.min.js"></script>
+
+<script src="plugin-frameworks/tether.min.js"></script>
+
+<script src="plugin-frameworks/bootstrap.js"></script>
+
+<script src="common/scripts.js"></script>
+
+</body>
+</html>
